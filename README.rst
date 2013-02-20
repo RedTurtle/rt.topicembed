@@ -12,7 +12,7 @@ This is practically a simple form that allows user to configure a web widget.
 The code can be found in the `textarea` in the same view. An example code
 looks like that:
 
-```
+```html
 <script>
     (function() {
         var s = document.createElement('script');
@@ -23,5 +23,6 @@ looks like that:
     }());
 </script>
 ```
+
 
 This code can be later embeded on the external site, the same as **twitter** widget.
