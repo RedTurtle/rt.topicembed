@@ -5,7 +5,7 @@ version = '1.0'
 setup(name='rt.topicembed',
       version=version,
       description="Embed Plone's Topic results as Web Widget",
-      long_description=open("README.rst").read() + "\n" +
+      long_description=open("README.md").read() + "\n" +
                        open("HISTORY.txt").read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
