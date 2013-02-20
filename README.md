@@ -18,7 +18,12 @@ looks like that:
         var s = document.createElement('script');
         s.src = 'http://nohost/plone/events/embed.js';
         s.async = true;
-        window.topic_options = (window.topic_options || []).concat([ { element_id: 'embeded_id', elements_length: 5, embed_css: true, new_window: true }]);
+        window.topic_options = (window.topic_options || []).concat([ { 
+            element_id: 'embeded_id',
+            elements_length: 5,
+            embed_css: true, 
+            new_window: true 
+        }]);
         document.body.appendChild(s);
     }());
 </script>
