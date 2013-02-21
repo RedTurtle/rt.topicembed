@@ -20,9 +20,9 @@ looks like that:
         s.async = true;
         window.topic_options = (window.topic_options || []).concat([ { 
             element_id: 'embeded_id',
-            elements_length: 5,
-            embed_css: true, 
-            new_window: true 
+            elements_length: 5, //how many elements to show
+            embed_css: true, //embed rt.topicembed css styles
+            new_window: true //open links in new window
         }]);
         document.body.appendChild(s);
     }());
