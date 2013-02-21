@@ -21,8 +21,8 @@ class EmbedJSON(BrowserView):
         self.request.RESPONSE.setHeader('Content-Type', 'application/x-javascript; charset=utf-8')
         params = self.request.form
 
-        elements_length = json.loads(params.get('items'))
-        new_window = json.loads(params.get('new_window'))
+        elements_length = json.loads(params.get('items','5'))
+        new_window = json.loads(params.get('new_window','false'))
         html = self.render(elements_length, new_window)
 
         jsonp = "%(callback)s ( {'html': '%(html)s' } )"

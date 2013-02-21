@@ -38,7 +38,7 @@
             </label>
             <textarea id="embedcode" cols="40" rows="11" readonly="readonly">Code here</textarea>
           </div>
-        <script tal:attributes="src string:${context/portal_url}/++resource++rt.topicembed.resources/form.js"></script>
+          <script tal:attributes="src string:${context/portal_url}/++resource++rt.topicembed.resources/form.js?uid=${context/UID}"></script>
     </metal:content-core>
   </body>
 </html>

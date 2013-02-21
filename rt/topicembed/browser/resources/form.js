@@ -1,14 +1,22 @@
 (function($) {
     var code;
     var js_url;
+    var scripts = document.getElementsByTagName('script');
+    var myScript = scripts[ scripts.length - 1 ];
+    var queryString = myScript.src.replace(/^[^\?]+\??/,'');
+    var uid = queryString.replace('uid=','');
+    if (uid == ''){
+        uid = 'element_id';
+    };
+    var element_id = 'embed_' + uid;
     js_url = window.location.href.replace('topic_embed', 'embed.js');
-    code = '<div id=\'embeded_id\'></div>\n' +
+    code = '<div id=\'' + element_id + '\' class=\'embedwidget\'></div>\n' +
            '&lt;script&gt;\n' +
            '    (function() {\n' +
            '        var s = document.createElement(\'script\');\n' +
            '        s.src = \'' + js_url + '\';\n' +
            '        s.async = true;\n' +
-           '        window.topic_options = (window.topic_options || []).concat([ { element_id: \'embeded_id\', elements_length: %ELEMENTS%, embed_css: %CSS%, new_window: %NEW_WINDOW% }]);\n' +
+           '        window.topic_options = (window.topic_options || []).concat([ { element_id: \'' + element_id + '\', elements_length: %ELEMENTS%, embed_css: %CSS%, new_window: %NEW_WINDOW% }]);\n' +
            '        document.body.appendChild(s);\n' +
            '    }());\n' +
            '&lt;/script&gt;'
@@ -30,14 +38,14 @@
         result = result.replace('%CSS%', embed_css);
         result = result.replace('%NEW_WINDOW%', new_window);
         $('#embedcode').html(result);
-    }
+    };
     render(code);
     $('#embedcode').click(function(){
         this.select();
-    })
+    });
     $('#number_of_items').keyup(function(){
         render(code);
-    })
+    });
     $('#new_window_open').click(function(){
         render(code);
     });
