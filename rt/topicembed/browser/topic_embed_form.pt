@@ -36,7 +36,7 @@
             <label for="embedcode" i18n:translate="">
               Embed code
             </label>
-            <textarea id="embedcode" cols="40" rows="9" readonly="readonly">Code here</textarea>
+            <textarea id="embedcode" cols="40" rows="11" readonly="readonly">Code here</textarea>
           </div>
         <script tal:attributes="src string:${context/portal_url}/++resource++rt.topicembed.resources/form.js"></script>
     </metal:content-core>

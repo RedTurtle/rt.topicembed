@@ -2,7 +2,8 @@
     var code;
     var js_url;
     js_url = window.location.href.replace('topic_embed', 'embed.js');
-    code = '&lt;script&gt;\n' +
+    code = '<div id=\'embeded_id\'></div>\n' +
+           '&lt;script&gt;\n' +
            '    (function() {\n' +
            '        var s = document.createElement(\'script\');\n' +
            '        s.src = \'' + js_url + '\';\n' +
