@@ -31,3 +31,38 @@ looks like that:
 
 
 This code can be later embeded on the external site, the same as **twitter** widget.
+
+Output
+------
+
+The template for rendering the output is registered by this ZCML slug:
+
+```xml
+    <browser:page
+         name="json"
+         for="Products.ATContentTypes.interfaces.topic.IATTopic"
+         layer="..interfaces.IBrowserLayer"
+         class=".embed.EmbedJSON"
+         permission="zope2.View"
+     />
+```
+and it's called `items_macro.pt`. It generates an HTML output similar to:
+
+```html
+<div>
+   <p>
+     <a href="http://nohost/plone/events/event1">Event 1 title</a>
+   </p>
+   <div>Short event description</div>
+   <img src="http://nohost/plone/events/event1/image_mini" title="Event 1 image">
+</div>
+<div>
+   <p>
+     <a href="http://nohost/plone/events/event2">Event 2 title</a>
+   </p>
+   <div>Other event description</div>
+   <img src="http://nohost/plone/events/event2/image_mini" title="Event 2 image">
+</div>
+```
+
+
