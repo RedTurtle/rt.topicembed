@@ -1,16 +1,10 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.1.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
-
-1.1 (2013-03-05)
-----------------
-
-- Nothing changed yet.
+- Fix JSON [amleczko]
 
 
 1.0 (2013-03-05)

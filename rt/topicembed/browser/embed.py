@@ -25,9 +25,9 @@ class EmbedJSON(BrowserView):
         new_window = json.loads(params.get('new_window','false'))
         html = self.render(elements_length, new_window)
 
-        jsonp = "%(callback)s ( {'html': '%(html)s' } )"
+        jsonp = "%(callback)s ({'html': %(html)s })"
         return jsonp % {'callback': params.get('callback'),
-                        'html': html}
+                        'html': json.dumps(html)}
 
     def render(self, elements_length, new_window):
         items = self.context.queryCatalog()[:elements_length]
