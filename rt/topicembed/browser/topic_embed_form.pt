@@ -38,6 +38,18 @@
             </label>
             <textarea id="embedcode" cols="40" rows="11" readonly="readonly">Code here</textarea>
           </div>
+          <h4 class="css-embed-example" i18n:translate="">This is a CSS example you can use as a starting point on your website</h4>
+          <pre class="css-embed-example">
+.embedwidget {font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;}<br />
+.embeditem {clear: left; margin-bottom: 1em;}<br />
+.embeditem h4 {margin: 0 0 0.3em 120px; padding-top: 0.2em; font-size: 1.05em;}<br />
+.embeditem a {text-decoration: none; color: #205C90; border-bottom: 1px dotted #CCC;}<br />
+.embeditem a:focus, .embeditem a:hover {color: #000; border-bottom: 1px solid #666;}<br />
+.embeditem .embedimage {float: left; max-width: 100px; max-height: 100px; margin: 0;}<br />
+.embeditem .embedimage img {width: 100%;}<br />
+.embeditem .embedbody { font-size: 0.9em; margin-left: 120px;}<br />
+.embeditem .embedbody:after {clear: both; content:""; line-height: 0; display: table;}<br />
+          </pre>
           <script tal:attributes="src string:${context/portal_url}/++resource++rt.topicembed.resources/form.js?uid=${context/UID}"></script>
     </metal:content-core>
   </body>
