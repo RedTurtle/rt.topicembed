@@ -44,6 +44,7 @@ function main() {
             var element_id = option.element_id;
             var elements_length = option.elements_length;
             var embed_css = option.embed_css;
+            var image_size = option.image_size;
             var new_window = option.new_window;
             if (embed_css===true){
                 /******* Load CSS *******/
@@ -56,7 +57,7 @@ function main() {
             }
             /******* Load HTML *******/
             var jsonp_url = "%(context_url)s/@@json?callback=?"
-            $.getJSON(jsonp_url, { new_window: new_window, items: elements_length },
+            $.getJSON(jsonp_url, { new_window: new_window, items: elements_length, image_size: image_size },
             function(data) {
                 $('#'+ element_id).html(data.html);
             });

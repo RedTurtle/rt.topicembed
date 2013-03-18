@@ -16,7 +16,7 @@
            '        var s = document.createElement(\'script\');\n' +
            '        s.src = \'' + js_url + '\';\n' +
            '        s.async = true;\n' +
-           '        window.topic_options = (window.topic_options || []).concat([ { element_id: \'' + element_id + '\', elements_length: %ELEMENTS%, embed_css: %CSS%, new_window: %NEW_WINDOW% }]);\n' +
+           '        window.topic_options = (window.topic_options || []).concat([ { element_id: \'' + element_id + '\', elements_length: %ELEMENTS%, embed_css: %CSS%, new_window: %NEW_WINDOW%, image_size: "%IMAGE_SIZE%" }]);\n' +
            '        document.body.appendChild(s);\n' +
            '    }());\n' +
            '&lt;/script&gt;'
@@ -34,9 +34,14 @@
         if (new_window === undefined){
             new_window = true;
         }
+        image_size = $("input:radio[name=image_size]:checked").val()
+        if (image_size === undefined){
+            image_size = 'thumb';
+        }
         result = result.replace('%ELEMENTS%', elements_length);
         result = result.replace('%CSS%', embed_css);
         result = result.replace('%NEW_WINDOW%', new_window);
+        result = result.replace('%IMAGE_SIZE%', image_size);
         $('#embedcode').html(result);
     };
     render(code);
@@ -50,6 +55,9 @@
         render(code);
     });
     $('#include_css').click(function(){
+        render(code);
+    });
+    $('input:radio[name=image_size]').click(function(){
         render(code);
     });
 })(jQuery);

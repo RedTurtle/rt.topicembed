@@ -4,8 +4,9 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- add image size selection [amleczko]
+- add example CSS [massimo]
+- add translations [amleczko]
 
 1.1.1 (2013-03-05)
 ------------------

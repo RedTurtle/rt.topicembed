@@ -26,6 +26,15 @@
             </label>
           </div>
           <div class="field">
+            <label for="image_size">
+              <tal:translate i18n:translate="">You can choose which image size to use in embed mode.</tal:translate><br />
+              <tal:images repeat="size view/image_sizes">
+                <input type="radio" name="image_size" value="" tal:attributes="value python:size[0]">
+                <span class="discreet" tal:content="python:'%s (%sx%s)' % (size[0], size[1], size[2])"></span><br />
+              </tal:images>
+            </label>
+          </div>
+          <div class="field">
             <label for="include_css">
                 <input type="checkbox" value="1" name="include_css" id="include_css">
                 <tal:translate i18n:translate="">Include source CSS</tal:translate>
@@ -40,15 +49,15 @@
           </div>
           <h4 class="css-embed-example" i18n:translate="">This is a CSS example you can use as a starting point on your website</h4>
           <pre class="css-embed-example">
-.embedwidget {font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;}<br />
-.embeditem {clear: left; margin-bottom: 1em;}<br />
-.embeditem h4 {margin: 0 0 0.3em 120px; padding-top: 0.2em; font-size: 1.05em;}<br />
-.embeditem a {text-decoration: none; color: #205C90; border-bottom: 1px dotted #CCC;}<br />
-.embeditem a:focus, .embeditem a:hover {color: #000; border-bottom: 1px solid #666;}<br />
-.embeditem .embedimage {float: left; max-width: 100px; max-height: 100px; margin: 0;}<br />
-.embeditem .embedimage img {width: 100%;}<br />
-.embeditem .embedbody { font-size: 0.9em; margin-left: 120px;}<br />
-.embeditem .embedbody:after {clear: both; content:""; line-height: 0; display: table;}<br />
+.embedwidget {font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;}
+.embeditem {clear: left; margin-bottom: 1em;}
+.embeditem h4 {margin: 0 0 0.3em 120px; padding-top: 0.2em; font-size: 1.05em;}
+.embeditem a {text-decoration: none; color: #205C90; border-bottom: 1px dotted #CCC;}
+.embeditem a:focus, .embeditem a:hover {color: #000; border-bottom: 1px solid #666;}
+.embeditem .embedimage {float: left; max-width: 100px; max-height: 100px; margin: 0;}
+.embeditem .embedimage img {width: 100%;}
+.embeditem .embedbody { font-size: 0.9em; margin-left: 120px;}
+.embeditem .embedbody:after {clear: both; content:""; line-height: 0; display: table;}
           </pre>
           <script tal:attributes="src string:${context/portal_url}/++resource++rt.topicembed.resources/form.js?uid=${context/UID}"></script>
     </metal:content-core>

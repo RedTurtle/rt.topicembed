@@ -8,6 +8,7 @@
          name="topic_embed"
          for="Products.ATContentTypes.interfaces.topic.IATTopic"
          layer="..interfaces.IBrowserLayer"
+         class=".embed.EmbedForm"
          template="topic_embed_form.pt"
          permission="zope2.View"
      />
