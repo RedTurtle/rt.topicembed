@@ -28,41 +28,41 @@ msgstr ""
 
 #: ./browser/topic_embed_form.pt:11
 msgid "Generate embed code"
-msgstr ""
+msgstr "Genera il codice da includere"
 
 #: ./browser/topic_embed_form.pt:40
 msgid "Include source CSS"
-msgstr ""
+msgstr "Includi il css di default"
 
 #: ./browser/topic_embed_form.pt:16
 msgid "Number of items"
-msgstr ""
+msgstr "Numero di elementi da mostrare"
 
 #: ./browser/topic_embed_form.pt:24
 msgid "Open links in new window"
-msgstr ""
+msgstr "Apri i link in una nuova finestra"
 
 #: ./browser/topic_embed_form.pt:50
 msgid "This is a CSS example you can use as a starting point on your website"
-msgstr ""
+msgstr "Questo è un css di esempio da utilizzare come punto di partenza per il tuo sito"
 
 #: ./browser/topic_embed_form.pt:17
 msgid "This will tell how many items should be displayed."
-msgstr ""
+msgstr "Questo numero indica il numero massimo di elementi che si vogliono mostrare"
 
 #: ./browser/topic_embed_form.pt:41
 msgid "This will tell whether our CSS should be included."
-msgstr ""
+msgstr "Consente di decidere se si vuole includere il css di default."
 
 #: ./browser/topic_embed_form.pt:25
 msgid "This will tell whether you want to open links in new window."
-msgstr ""
+msgstr "Consente di decidere se si vuole aprire i link in una nuova finestra."
 
 #: ./browser/topic_embed_form.pt:13
 msgid "Using fields below generate the embed code you can use on your website."
-msgstr ""
+msgstr "Utilizza i campi sotto elencati per generare il codice che si vorrà usare sul sito internet di destinazione"
 
 #: ./browser/topic_embed_form.pt:30
 msgid "You can choose which image size to use in embed mode."
-msgstr ""
+msgstr "Scegli quale dimensione di immagine si vuole utilizzare nel codice da generare"
 
