@@ -29,9 +29,9 @@ class EmbedJSON(BrowserView):
         self.request.RESPONSE.setHeader('Content-Type', 'application/x-javascript; charset=utf-8')
         params = self.request.form
 
-        elements_length = json.loads(params.get('items','5'))
-        new_window = json.loads(params.get('new_window','false'))
-        image_size = params.get('image_size','thumb')
+        elements_length = json.loads(params.get('items', '5'))
+        new_window = json.loads(params.get('new_window', 'false'))
+        image_size = params.get('image_size', 'thumb')
         html = self.render(elements_length, new_window, image_size)
 
         jsonp = "%(callback)s ({'html': %(html)s })"
@@ -39,7 +39,12 @@ class EmbedJSON(BrowserView):
                         'html': json.dumps(html)}
 
     def render(self, elements_length, new_window, image_size):
-        items = self.context.queryCatalog()[:elements_length]
-        html = self.template(items=items, new_window=new_window, image_size=image_size)
-        html = html.replace('\n','').replace('"','\"')
+        results = self.context.queryCatalog()
+        if not isinstance(self.context.queryCatalog(), list):
+            results = list(self.context.queryCatalog())
+        items = results[:elements_length]
+        html = self.template(items=items,
+                             new_window=new_window,
+                             image_size=image_size)
+        html = html.replace('\n', '').replace('"', '\"')
         return html

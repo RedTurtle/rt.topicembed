@@ -27,6 +27,29 @@
          permission="zope2.View"
      />
 
+    <browser:page
+         name="topic_embed"
+         for="plone.app.collection.interfaces.ICollection"
+         layer="..interfaces.IBrowserLayer"
+         class=".embed.EmbedForm"
+         template="topic_embed_form.pt"
+         permission="zope2.View"
+     />
+    <browser:page
+         name="embed.js"
+         for="plone.app.collection.interfaces.ICollection"
+         layer="..interfaces.IBrowserLayer"
+         class=".embed.EmbedJS"
+         permission="zope2.View"
+     />
+    <browser:page
+         name="json"
+         for="plone.app.collection.interfaces.ICollection"
+         layer="..interfaces.IBrowserLayer"
+         class=".embed.EmbedJSON"
+         permission="zope2.View"
+     />
+
   <!-- Resource directory for js/css -->
   <browser:resourceDirectory
     name="rt.topicembed.resources"
